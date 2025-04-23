@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pueblo, Patria y Valores</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function abrirModal(titulo, mensaje) {
+      document.getElementById('modal-titulo').innerText = titulo;
+      document.getElementById('modal-mensaje').innerText = mensaje;
+      document.getElementById('modal').classList.remove('hidden');
+    }
+    function cerrarModal() {
+      document.getElementById('modal').classList.add('hidden');
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Modal -->
+  <div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-xl shadow-lg max-w-md w-full p-6 relative">
+      <button onclick="cerrarModal()" class="absolute top-2 right-2 text-gray-600 hover:text-black">✖</button>
+      <h3 id="modal-titulo" class="text-xl font-bold mb-2"></h3>
+      <p id="modal-mensaje" class="text-gray-700"></p>
+    </div>
+  </div>
+
+  <!-- Header fijo -->
+  <header class="bg-white shadow-md fixed w-full top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-4">
+        <img src="/mnt/data/Screenshot_2025-04-04_09.10.19-removebg-preview.png" alt="Logo PPV" class="h-10">
+        <h1 class="text-xl font-bold text-green-900">Pueblo, Patria y Valores</h1>
+      </div>
+      <nav class="space-x-4 text-green-900 font-medium">
+        <a href="#quienes">Quiénes Somos</a>
+        <a href="#principios">Principios</a>
+        <a href="#propuestas">Propuestas</a>
+        <a href="#unete">Únete</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section class="bg-green-900 text-white py-20 text-center">
+      <h2 class="text-5xl font-bold mb-4">Pueblo, Patria y Valores</h2>
+      <p class="text-xl">Tradición, Libertad y Futuro para España</p>
+      <a href="#unete" class="mt-8 inline-block bg-white text-green-900 px-6 py-3 font-semibold rounded-full">Únete al Movimiento</a>
+    </section>
+
+    <!-- Quiénes Somos -->
+    <section id="quienes" class="py-16 px-6 max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">¿Quiénes Somos?</h2>
+      <p class="text-lg">PPV es un partido político conservador que defiende los valores tradicionales, la unidad nacional, la familia, el orden y la libertad económica. Nuestra misión es devolver a España su soberanía, identidad y prosperidad.</p>
+    </section>
+
+    <!-- Principios -->
+    <section id="principios" class="bg-gray-100 py-16 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Nuestros Principios</h2>
+        <ul class="list-disc pl-6 text-lg space-y-2">
+          <li>Defensa de la unidad de España</li>
+          <li>Protección de la familia y la vida</li>
+          <li>Libertad individual y de mercado</li>
+          <li>Control de la inmigración ilegal</li>
+          <li>Orgullo nacional y rescate de nuestra historia</li>
+          <li>Apoyo a las fuerzas de seguridad y al ejército</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Propuestas -->
+    <section id="propuestas" class="py-16 px-6 max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Propuestas Clave</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
+        <button onclick="abrirModal('Impuestos', 'Se eliminará el impuesto de sucesiones y se bajará el IVA, compensando con recortes del gasto político.')" class="bg-white shadow p-4 rounded-xl text-left font-semibold hover:bg-green-50">Impuestos</button>
+
+        <button onclick="abrirModal('Educación', 'En educación se invertirá más dinero y se recuperarán valores y disciplina.')" class="bg-white shadow p-4 rounded-xl text-left font-semibold hover:bg-green-50">Educación</button>
+
+        <button onclick="abrirModal('Seguridad', 'En seguridad se implementarán nuevos métodos y se reforzará la seguridad nacional.')" class="bg-white shadow p-4 rounded-xl text-left font-semibold hover:bg-green-50">Seguridad</button>
+
+        <button onclick="abrirModal('Mundo Rural', 'Se eliminarán trabas al mundo rural y se priorizará el producto local español.')" class="bg-white shadow p-4 rounded-xl text-left font-semibold hover:bg-green-50">Defensa del Mundo Rural</button>
+      </div>
+    </section>
+
+    <!-- Únete -->
+    <section id="unete" class="bg-green-900 text-white py-16 text-center">
+      <h2 class="text-3xl font-bold mb-4">¿Quieres ser parte del cambio?</h2>
+      <p class="mb-6 text-lg">Hazte miembro de Pueblo, Patria y Valores y lucha con nosotros por el futuro de España.</p>
+      <a href="#" class="bg-white text-green-900 px-6 py-3 font-semibold rounded-full">Afíliate Ahora</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2025 Pueblo, Patria y Valores (PPV). Todos los derechos reservados.</p>
+    <div class="mt-2">
+      <a href="#" class="mx-2 hover:underline">Contacto</a>
+      <a href="#" class="mx-2 hover:underline">Política de privacidad</a>
+    </div>
+  </footer>
+
+</body>
+</html>
